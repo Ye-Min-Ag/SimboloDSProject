@@ -24,8 +24,9 @@ with open(path_to_html,'r') as f:
     html_data = f.read()
 
 ## Show in webpage
-# st.header("Show an external HTML")
-st.components.v1.html(html_data)
+with st.container():
+    st.components.v1.html(html_data, width=1200, height=600)
+    # Adjust width and height as needed
 
 st.title("Myanmar Flight Routes")
 path_to_html_1 = "my_map1.html" 
@@ -35,6 +36,7 @@ with open(path_to_html_1,'r') as f:
     html_data_1 = f.read()
 
 ## Show in webpage
-# st.header("Show an external HTML")
-st.components.v1.html(html_data_1)
-st.markdown("**Some Source airports are marked with green color.**")  # For a smaller descriptive text
+with st.container():
+    st.components.v1.html(html_data_1, width=1200, height=600)
+    # Adjust width and height as needed
+st.markdown("**Some Source airports are marked with green color.**")# For a smaller descriptive text
