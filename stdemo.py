@@ -16,8 +16,25 @@ import streamlit.components.v1 as components
 st.title("Myanmar's 2012 Civil Aviation Analysis")
 
 st.title("Myanmar Airports")
-st.components.v1.html("my_map.html")
+
+path_to_html = "my_map.html" 
+
+# Read file and keep in variable
+with open(path_to_html,'r') as f: 
+    html_data = f.read()
+
+## Show in webpage
+# st.header("Show an external HTML")
+st.components.v1.html(html_data)
 
 st.title("Myanmar Flight Routes")
-st.components.v1.html("my_map1.html")
+path_to_html_1 = "my_map1.html" 
+
+# Read file and keep in variable
+with open(path_to_html_1,'r') as f: 
+    html_data_1 = f.read()
+
+## Show in webpage
+# st.header("Show an external HTML")
+st.components.v1.html(html_data_1)
 st.markdown("**Some Source airports are marked with green color.**")  # For a smaller descriptive text
