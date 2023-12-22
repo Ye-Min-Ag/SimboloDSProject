@@ -63,12 +63,12 @@ path_to_html_2 = "th_map.html"
 # Read file and keep in variable
 with open(path_to_html_2,'r') as f: 
     html_data_2 = f.read()
-
-st.write("Flights In ASEAN")
 ## Show in webpage
 with st.container():
     st.components.v1.html(html_data_2, width=900, height=600)
     # Adjust width and height as needed
+
+st.write("Flights In ASEAN")
 image3 = Image.open('plot2.png')
 image4 = Image.open('plot1.png')
 col1, col2 = st.columns(2)
