@@ -59,17 +59,17 @@ st.write("Length:", length)
 if st.button("Submit"):
     # Create a dictionary to hold the input data
     data0 = {
-        "Airline Name": airline_name,
-        "Flight Number": int(flight_number),
-        "Airport From": airport_from,
-        "Airport To": airport_to,
-        "Day of Week": int(day_of_week),
+        "Airline": airline_name,
+        "Flight": int(flight_number),
+        "AirportFrom": airport_from,
+        "AirportTo": airport_to,
+        "DayOfWeek": int(day_of_week),
         "Time": int(time),
         "Length": int(length) 
     }
     df = pd.DataFrame(data0, index=[0])  # Create a single-row DataFrame
     #st.write(df)  # Display the DataFrame
-    dum1 = pd.read_csv('Airlines.csv')
+    dum1 = pd.read_csv('Airlines2.csv')
     dum2=pd.get_dummies(dum1.copy())
     target=['Delay']
     dum3 = dum2.drop(target+['id'],axis=1)
