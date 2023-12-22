@@ -68,3 +68,12 @@ with open(path_to_html_2,'r') as f:
 with st.container():
     st.components.v1.html(html_data_2, width=900, height=600)
     # Adjust width and height as needed
+image3 = Image.open('plot2.png')
+image4 = Image.open('plot1.png')
+col1, col2 = st.columns(2)
+
+# Place each image within its respective column
+with col1:
+    st.image(image3)
+with col2:
+    st.image(image4)
