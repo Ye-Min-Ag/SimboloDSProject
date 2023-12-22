@@ -61,7 +61,7 @@ st.write("Thailand Total Flight Routes")
 path_to_html_2 = "thai_map1.html" 
 
 # Read file and keep in variable
-with open(path_to_html_1,'r') as f: 
+with open(path_to_html_2,'r') as f: 
     html_data_2 = f.read()
 
 ## Show in webpage
