@@ -51,6 +51,14 @@ if st.button("Submit"):
     # Create a DataFrame from the dictionary
     df = pd.DataFrame(data0, index=[0])  # Create a single-row DataFrame
     st.write(df)  # Display the DataFrame
+    dum1 = pd.read_csv('Airlines2.csv')
+    target=['Delay']
+    data_D = dum1.drop(target+['id'],axis=1)
+    data_D1=pd.get_dummies(df)
+    data_D2 =  data_D1.reindex(columns = data_D.columns, fill_value=0)
+    y_preds = model.predict(data_D2)
+    st.write('Predicted delay:', y_preds)
 
-    # Further process the DataFrame as needed
+
+  
 
