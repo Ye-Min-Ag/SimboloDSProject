@@ -8,8 +8,7 @@ from tensorflow.keras.utils import to_categorical
 from sklearn.metrics import classification_report, log_loss, accuracy_score
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import KFold
-
-# ... your existing Streamlit code ...
+from sklearn.model_selection import train_test_split
 
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
