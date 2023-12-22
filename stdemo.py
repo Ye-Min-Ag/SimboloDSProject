@@ -73,7 +73,7 @@ image4 = Image.open('plot1.png')
 col1, col2 = st.columns(2)
  # Adjust dimensions
 with col1:
-st.image(image3)
+    st.image(image3)
 with col2:
-st.image(image4)
+    st.image(image4)
 
