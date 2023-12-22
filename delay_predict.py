@@ -63,11 +63,11 @@ if st.button("Submit"):
         "Length": int(length) 
     }
     df = pd.DataFrame(data0, index=[0])  # Create a single-row DataFrame
-    #st.write(df)  # Display the DataFrame
-    data_D1=pd.get_dummies(df)
-    data_D2 =  data_D1.reindex(columns = dataX.columns, fill_value=0)
-    y_preds = model.predict(data_D2)
-    st.write('Predicted delay:', y_preds)
+    st.write(df)  # Display the DataFrame
+    # data_D1=pd.get_dummies(df)
+    # data_D2 =  data_D1.reindex(columns = dataX.columns, fill_value=0)
+    # y_preds = model.predict(data_D2)
+    # st.write('Predicted delay:', y_preds)
 
 
   
