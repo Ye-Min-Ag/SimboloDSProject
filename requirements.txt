@@ -11,3 +11,11 @@ geopy
 matplotlib
 numpy
 folium
+os
+random
+seaborn
+contextlib2 
+tqdm
+lightgbm
+category_encoders
+tensorflow 
