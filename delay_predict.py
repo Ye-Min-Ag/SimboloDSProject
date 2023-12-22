@@ -36,3 +36,5 @@ testY=dataY.iloc[N[(n//5)*4:]]
 model = lgbm.LGBMClassifier(learning_rate=0.09,max_depth=-5,random_state=42)
 model.fit(trainX,trainY)
 
+
+
