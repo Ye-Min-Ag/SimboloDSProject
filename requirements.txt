@@ -3,7 +3,6 @@ streamlit
 pandas
 loads
 requests
-PIL
 Image
 Pillow
 plotly
