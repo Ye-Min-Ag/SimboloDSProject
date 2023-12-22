@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-import lightgbm as lgbm
+# import lightgbm as lgbm
 import numpy as np
 import pandas as pd
 from contextlib import contextmanager
@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report, log_loss, accuracy_score
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import KFold
 from sklearn.model_selection import train_test_split
-import random
+# import random
 
 
 # data0=pd.read_csv('Airlines2.csv')
