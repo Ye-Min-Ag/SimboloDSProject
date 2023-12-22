@@ -42,7 +42,7 @@ with st.container():
 st.markdown("**Some Source airports are marked with green color.**")# For a smaller descriptive text
 image0 = Image.open('pie_chart2.png')    
 st.image(image0) 
-image2 = Image.open('pie_chart1.png')    
+image1 = Image.open('pie_chart1.png')    
 st.image(image1) 
-image3 = Image.open('pie_chart.png')    
-st.image(image3) 
+image2 = Image.open('pie_chart.png')    
+st.image(image2) 
