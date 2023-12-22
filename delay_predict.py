@@ -36,7 +36,7 @@ if st.button("Submit"):
     st.write("Airport To:", airport_to)
     st.write("Day of Week:", day_of_week)
     st.write("Time:", time)
-    st.write("Length:", length, "hours")
+    st.write("Length:", length)
 
     # Process the input data further based on your application's needs
 
