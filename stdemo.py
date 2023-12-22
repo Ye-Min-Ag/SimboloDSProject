@@ -71,11 +71,9 @@ with st.container():
 image3 = Image.open('plot2.png')
 image4 = Image.open('plot1.png')
 col1, col2 = st.columns(2)
-# Place each image within its respective column
-with st.container():
-    st.write("**Images**", width=800, height=400)  # Adjust dimensions
-    with col1:
-        st.image(image3)
-    with col2:
-        st.image(image4)
+ # Adjust dimensions
+with col1:
+st.image(image3)
+with col2:
+st.image(image4)
 
