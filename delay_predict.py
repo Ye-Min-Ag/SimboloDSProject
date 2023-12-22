@@ -39,13 +39,13 @@ with open('model.pkl', 'rb') as f:
 st.title("Flight Information")
 
 # Create input fields with descriptive labels
-airline_name = st.text_input("Name of Airline")
-flight_number = st.number_input("Flight Number", value=1, step=1)  # Initial value and step of 1
-airport_from = st.text_input("Airport From")
-airport_to = st.text_input("Airport To")
-day_of_week = st.number_input("Day of Week in number", min_value = 1, step = 1)
-time = st.number_input("Time",min_value=0, step=1) 
-length = st.number_input("Length", min_value=1, step=1) 
+airline_name = st.text_input("Enter Name of Airline:")
+flight_number = st.number_input("Enter Flight Number", value=1, step=1)  # Initial value and step of 1
+airport_from = st.text_input("Enter Source Airport")
+airport_to = st.text_input("Enter Destination Airport")
+day_of_week = st.number_input("Enter Day of Week in number", min_value = 1, step = 1)
+time = st.number_input("Enter Time in 0000 format",min_value=0, step=1) 
+length = st.number_input("Enter Length", min_value=1, step=1) 
 
 st.write("**Entered Information:**")
 st.write("Airline Name:", airline_name)
