@@ -13,24 +13,29 @@ from sklearn.model_selection import train_test_split
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
+st.title("Flight Information")
 # Use the loaded model for predictions or other tasks
 rfmodel= st.sidebar.checkbox('Prediction')
 
-# if rfmodel:
-    
-#     with st.form("my_form1"):
-        
-#         st.title('Classify the airlines')        
-#         st.subheader("Please choose the airline")
+# Create input fields with descriptive labels
+airline_name = st.text_input("Name of Airline")
+flight_number = st.number_input("Flight Number")
+airport_from = st.text_input("Airport From")
+airport_to = st.text_input("Airport To")
+day_of_week = st.number_input("Day of Week in number")
+time = st.number_input("Time")
+length = st.number_input("Length")
 
-#         st.write("You selected:", "Age:" + agegp + "Student:" + student)    
-#         submitted = st.form_submit_button("Submit")
-#         if submitted:
-#             #st.write("slider", slider_val, "checkbox", checkbox_val)
-#             inputdata = {'age': agegp,
-#                         'studen': student, 
-#                         'income': income,
-#                         'credit rating': credit_rating}
-#             features = pd.DataFrame(inputdata, index=[0])
-#             features_dummy = pd.get_dummies(features)
-#             #st.write(features)
+# Access the entered values
+if st.button("Submit"):
+    st.write("**Entered Information:**")
+    st.write("Airline Name:", airline_name)
+    st.write("Flight Number:", flight_number)
+    st.write("Airport From:", airport_from)
+    st.write("Airport To:", airport_to)
+    st.write("Day of Week:", day_of_week)
+    st.write("Time:", time)
+    st.write("Length:", length, "hours")
+
+    # Process the input data further based on your application's needs
+
