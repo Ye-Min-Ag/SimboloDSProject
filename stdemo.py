@@ -39,8 +39,8 @@ with open(path_to_html_1,'r') as f:
 with st.container():
     st.components.v1.html(html_data_1, width=900, height=600)
     # Adjust width and height as needed
-st.markdown("**Some Source airports are marked with green color.**")# For a smaller descriptive text
 
+st.write("Myanmar's Flights Distributions")
 # Load the images
 image0 = Image.open('pie_chart2.png')
 image1 = Image.open('pie_chart1.png')
