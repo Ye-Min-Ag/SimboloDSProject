@@ -11,6 +11,11 @@ from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import KFold
 from sklearn.model_selection import train_test_split
 # import random
+import pickle
+with open('model.pkl', 'rb') as f:
+    model = pickle.load(f)
+
+# Use the loaded model for predictions or other tasks
 
 
 # data0=pd.read_csv('Airlines2.csv')
@@ -63,10 +68,14 @@ if st.button("Submit"):
         "Length": int(length) 
     }
     df = pd.DataFrame(data0, index=[0])  # Create a single-row DataFrame
-    st.write(df)  # Display the DataFrame
-    # data_D1=pd.get_dummies(df)
-    # data_D2 =  data_D1.reindex(columns = dataX.columns, fill_value=0)
-    # y_preds = model.predict(data_D2)
+    #st.write(df)  # Display the DataFrame
+    dum1 = pd.read_csv('Airlines.csv')
+    dum2=pd.get_dummies(dum1.copy())
+    target=['Delay']
+    dum3 = dum2.drop(target+['id'],axis=1)
+    data_D1=pd.get_dummies(df)
+    data_D2 =  data_D1.reindex(columns = dum3.columns, fill_value=0)
+    y_preds = model.predict(data_D2)
     # st.write('Predicted delay:', y_preds)
 
 
