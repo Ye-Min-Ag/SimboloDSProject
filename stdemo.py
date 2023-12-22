@@ -77,3 +77,7 @@ with col1:
 with col2:
     st.image(image4)
 
+image5 = Image.open('bar_chart1.png')
+image6 = Image.open('bar_chart2.png')
+st.image(image5)
+st.image(image6)
