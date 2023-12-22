@@ -49,7 +49,7 @@ if st.button("Submit"):
     }
 
     # Create a DataFrame from the dictionary
-    df = pd.DataFrame(data0)  # Create a single-row DataFrame
+    df = pd.DataFrame(data0, index=[0])  # Create a single-row DataFrame
     st.write(df)  # Display the DataFrame
 
     # Further process the DataFrame as needed
