@@ -25,7 +25,7 @@ with open(path_to_html,'r') as f:
 
 ## Show in webpage
 with st.container():
-    st.components.v1.html(html_data, width=400, height=400)
+    st.components.v1.html(html_data, width=600, height=500)
     # Adjust width and height as needed
 
 st.write("Myanmar Total Flight Routes")
