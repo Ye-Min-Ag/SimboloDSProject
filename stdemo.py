@@ -71,7 +71,8 @@ with st.container():
 image3 = Image.open('plot2.png')
 image4 = Image.open('plot1.png')
 col1, col2 = st.columns(2)
-
+image3 = image3.resize((600, 600))  # Adjust dimensions as needed
+image4 = image4.resize((600, 600))
 # Place each image within its respective column
 with col1:
     st.image(image3)
