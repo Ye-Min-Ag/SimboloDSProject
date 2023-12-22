@@ -37,7 +37,7 @@ with open(path_to_html_1,'r') as f:
 
 ## Show in webpage
 with st.container():
-    st.components.v1.html(html_data_1, width=1200, height=600)
+    st.components.v1.html(html_data_1, width=900, height=600)
     # Adjust width and height as needed
 st.markdown("**Some Source airports are marked with green color.**")# For a smaller descriptive text
 
@@ -52,8 +52,8 @@ col1, col2, col3 = st.columns(3)
 # Place each image within its respective column
 with col1:
     st.image(image0)
-with col2:
-    st.image(image1)
 with col3:
+    st.image(image1)
+with col5:
     st.image(image2)
 
