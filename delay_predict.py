@@ -52,8 +52,6 @@ if st.button("Submit"):
         "Time": int(time),
         "Length": int(length) 
     }
-
-    # Create a DataFrame from the dictionary
     df = pd.DataFrame(data0, index=[0])  # Create a single-row DataFrame
     #st.write(df)  # Display the DataFrame
     data_D1=pd.get_dummies(df)
