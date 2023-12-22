@@ -74,6 +74,6 @@ col1, col2 = st.columns(2)
 
 # Place each image within its respective column
 with col1:
-    st.image(image3, width=600, height=600)
+    st.image(image3)
 with col2:
-    st.image(image4, width=600, height=600)
+    st.image(image4)
