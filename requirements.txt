@@ -5,3 +5,10 @@ loads
 requests
 PIL
 Image
+Pillow
+plotly
+geopandas
+geopy
+matplotlib
+numpy
+folium
