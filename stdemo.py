@@ -58,7 +58,7 @@ with col3:
     st.image(image2)
 
 st.write("Thailand Total Flight Routes")
-path_to_html_2 = "thai_map1.html" 
+path_to_html_2 = "th_map.html" 
 
 # Read file and keep in variable
 with open(path_to_html_2,'r') as f: 
