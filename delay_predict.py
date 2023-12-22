@@ -17,28 +17,10 @@ from sklearn.metrics import classification_report, log_loss, accuracy_score
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import KFold
 
-data0 = pd.read_csv('Airlines2.csv')
-data1=pd.get_dummies(data0.copy())
-n=len(data1)
-print(n)
-N=list(range(n))
-random.seed(2022)
-random.shuffle(N)
-target=['Delay']
-dataY = data1[target]
-dataX = data1.drop(target+['id'],axis=1)
+# ... your existing Streamlit code ...
 
-trainX=dataX.iloc[N[0:(n//5)*4]]
-trainY=dataY.iloc[N[0:(n//5)*4]]
+with open('model.pkl', 'rb') as f:
+    model = pickle.load(f)
 
-testX=dataX.iloc[N[(n//5)*4:]]
-testY=dataY.iloc[N[(n//5)*4:]]
-model = lgbm.LGBMClassifier(learning_rate=0.09,max_depth=-5,random_state=42)
-model.fit(trainX,trainY)
-
-import streamlit as st
-
-st.write("**Model Accuracy**")
-st.metric("Training Accuracy", model.score(trainX, trainY), delta=None, label="")
-st.metric("Testing Accuracy", model.score(testX, testY), delta=None, label="")
+# Use the loaded model for predictions or other tasks
 
