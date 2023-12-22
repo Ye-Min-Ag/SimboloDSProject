@@ -17,7 +17,7 @@ from sklearn.metrics import classification_report, log_loss, accuracy_score
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import KFold
 
-data0 = pd.read_csv(r'airlines2.csv')
+data0 = pd.read_csv('airlines2.csv')
 data1=pd.get_dummies(data0.copy())
 n=len(data1)
 print(n)
