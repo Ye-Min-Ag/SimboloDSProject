@@ -64,6 +64,7 @@ path_to_html_2 = "th_map.html"
 with open(path_to_html_2,'r') as f: 
     html_data_2 = f.read()
 
+st.write("Flights In ASEAN")
 ## Show in webpage
 with st.container():
     st.components.v1.html(html_data_2, width=900, height=600)
@@ -79,5 +80,7 @@ with col2:
 
 image5 = Image.open('bar_chart1.png')
 image6 = Image.open('bar_chart2.png')
+image7 = Image.open('final_chart.png')
 st.image(image5)
 st.image(image6)
+st.image(image7)
