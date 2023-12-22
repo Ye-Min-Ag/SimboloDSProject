@@ -22,8 +22,13 @@ random.shuffle(N)
 target=['Delay']
 dataY = data1[target]
 dataX = data1.drop(target+['id'],axis=1)
+trainX=dataX.iloc[N[0:(n//5)*4]]
+trainY=dataY.iloc[N[0:(n//5)*4]]
+
+testX=dataX.iloc[N[(n//5)*4:]]
+testY=dataY.iloc[N[(n//5)*4:]]
 model = lgbm.LGBMClassifier(learning_rate=0.09,max_depth=-5,random_state=42)
-model.fit(dataX,dataY)
+model.fit(trainX,trainY)
 
 st.title("Flight Information")
 
