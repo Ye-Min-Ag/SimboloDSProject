@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+import lightgbm as lgbm
 import numpy as np
 import pandas as pd
 from contextlib import contextmanager
