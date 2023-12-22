@@ -15,7 +15,7 @@ import streamlit.components.v1 as components
 
 st.title("Myanmar's 2012 Civil Aviation Analysis")
 
-st.title("Myanmar Airports")
+st.write("Myanmar Airports")
 
 path_to_html = "my_map.html" 
 
@@ -28,7 +28,7 @@ with st.container():
     st.components.v1.html(html_data, width=600, height=500)
     # Adjust width and height as needed
 
-st.title("Myanmar Flight Routes")
+st.write("Myanmar Total Flight Routes")
 path_to_html_1 = "my_map1.html" 
 
 # Read file and keep in variable
