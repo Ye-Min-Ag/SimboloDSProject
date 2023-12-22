@@ -57,3 +57,14 @@ with col2:
 with col3:
     st.image(image2)
 
+st.write("Thailand Total Flight Routes")
+path_to_html_2 = "thai_map1.html" 
+
+# Read file and keep in variable
+with open(path_to_html_1,'r') as f: 
+    html_data_2 = f.read()
+
+## Show in webpage
+with st.container():
+    st.components.v1.html(html_data_2, width=900, height=600)
+    # Adjust width and height as needed
