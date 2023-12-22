@@ -76,7 +76,9 @@ if st.button("Submit"):
     data_D1=pd.get_dummies(df)
     data_D2 =  data_D1.reindex(columns = dum3.columns, fill_value=0)
     y_preds = model.predict(data_D2)
-    st.write('Is your flight going to be delayed?:/n (1 means delay)', y_preds)
+    st.write('Is your flight going to be delayed?')
+    st.write('(1 means delay)')
+    st.write(y_preds)
 
 
   
