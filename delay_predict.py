@@ -20,12 +20,12 @@ rfmodel= st.sidebar.checkbox('Prediction')
 
 # Create input fields with descriptive labels
 airline_name = st.text_input("Name of Airline")
-flight_number = st.number_input("Flight Number")
+flight_number = st.number_input("Flight Number", value=1, step=1)  # Initial value and step of 1
 airport_from = st.text_input("Airport From")
 airport_to = st.text_input("Airport To")
-day_of_week = st.number_input("Day of Week in number")
-time = st.number_input("Time")
-length = st.number_input("Length")
+day_of_week = st.number_input("Day of Week in number", min_value = 1, step = 1)
+time = st.number_input("Time",min_value=0, step=1) 
+length = st.number_input("Length", min_value=1, step=1) 
 
 # Access the entered values
 if st.button("Submit"):
