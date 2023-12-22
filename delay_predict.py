@@ -14,4 +14,23 @@ with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # Use the loaded model for predictions or other tasks
+rfmodel= st.sidebar.checkbox('Prediction')
 
+# if rfmodel:
+    
+#     with st.form("my_form1"):
+        
+#         st.title('Classify the airlines')        
+#         st.subheader("Please choose the airline")
+
+#         st.write("You selected:", "Age:" + agegp + "Student:" + student)    
+#         submitted = st.form_submit_button("Submit")
+#         if submitted:
+#             #st.write("slider", slider_val, "checkbox", checkbox_val)
+#             inputdata = {'age': agegp,
+#                         'studen': student, 
+#                         'income': income,
+#                         'credit rating': credit_rating}
+#             features = pd.DataFrame(inputdata, index=[0])
+#             features_dummy = pd.get_dummies(features)
+#             #st.write(features)
