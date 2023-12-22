@@ -76,7 +76,7 @@ if st.button("Submit"):
     data_D1=pd.get_dummies(df)
     data_D2 =  data_D1.reindex(columns = dum3.columns, fill_value=0)
     y_preds = model.predict(data_D2)
-    # st.write('Predicted delay:', y_preds)
+    st.write('Predicted delay:', y_preds)
 
 
   
