@@ -40,3 +40,9 @@ with st.container():
     st.components.v1.html(html_data_1, width=1200, height=600)
     # Adjust width and height as needed
 st.markdown("**Some Source airports are marked with green color.**")# For a smaller descriptive text
+image0 = Image.open('pie_chart2.png')    
+    st.image(image0) 
+image2 = Image.open('pie_chart1.png')    
+    st.image(image1) 
+image3 = Image.open('pie_chart.png')    
+    st.image(image3) 
