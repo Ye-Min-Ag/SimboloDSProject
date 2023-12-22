@@ -10,9 +10,15 @@ from sklearn.metrics import classification_report, log_loss, accuracy_score
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import KFold
 from sklearn.model_selection import train_test_split
+import random
 
 data0=pd.read_csv('Airlines2.csv')
 data1=pd.get_dummies(data0.copy())
+n=len(data1)
+print(n)
+N=list(range(n))
+random.seed(2022)
+random.shuffle(N)
 target=['Delay']
 dataY = data1[target]
 dataX = data1.drop(target+['id'],axis=1)
@@ -20,8 +26,6 @@ model = lgbm.LGBMClassifier(learning_rate=0.09,max_depth=-5,random_state=42)
 model.fit(dataX,dataY)
 
 st.title("Flight Information")
-# Use the loaded model for predictions or other tasks
-rfmodel= st.sidebar.checkbox('Prediction')
 
 # Create input fields with descriptive labels
 airline_name = st.text_input("Name of Airline")
