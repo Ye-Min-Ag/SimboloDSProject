@@ -16,8 +16,8 @@ import streamlit.components.v1 as components
 st.title("Myanmar's 2012 Civil Aviation Analysis")
 
 st.title("Myanmar Airports")
-components.html("https://github.com/Ye-Min-Ag/SimboloDSProject/raw/main/my_map.html")
+st.components.v1.html("my_map.html")
 
 st.title("Myanmar Flight Routes")
-components.html("https://github.com/Ye-Min-Ag/SimboloDSProject/raw/main/my_map1.html")  # For a large title
+st.components.v1.html("my_map1.html")
 st.markdown("**Some Source airports are marked with green color.**")  # For a smaller descriptive text
