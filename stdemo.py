@@ -52,8 +52,8 @@ col1, col2, col3 = st.columns(3)
 # Place each image within its respective column
 with col1:
     st.image(image0)
-with col3:
+with col2:
     st.image(image1)
-with col5:
+with col3:
     st.image(image2)
 
