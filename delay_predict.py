@@ -77,7 +77,7 @@ if st.button("Submit"):
     data_D2 =  data_D1.reindex(columns = dum3.columns, fill_value=0)
     y_preds = model.predict(data_D2)
     st.title('Is your flight going to be delayed?')
-    st.write('(1 means "YES" (unfortunately)')
+    st.write('1 means "YES"')
     st.write(y_preds)
 
 
