@@ -41,7 +41,7 @@ st.title("Flight Information")
 # Create input fields with descriptive labels
 airline_name = st.text_input("Enter Name of Airline (must be operating in U.S., please input ICAO code.)")
 flight_number = st.number_input("Enter Flight Number", value=1, step=1)  # Initial value and step of 1
-airport_from = st.text_input("Enter Source Airport (must be U.S. airport")
+airport_from = st.text_input("Enter Source Airport (must be U.S. airport)")
 airport_to = st.text_input("Enter Destination Airport (must be U.S. airport)")
 day_of_week = st.number_input("Enter Day of Week in number", min_value = 1, step = 1)
 time = st.number_input("Enter Time in 0000 format",min_value=0, step=1) 
